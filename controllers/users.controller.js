@@ -2,6 +2,7 @@ const {
     getAllUsers,
     getAUserById,
     addAUser,
+    patchAUserById,
     deleteAUserById
 } = require('../models/users.model');
 
@@ -31,10 +32,20 @@ function getUserById(request, response, next) {
 function addUser(request, response, next) {
     addAUser(request.body)
         .then((user) => {
-            response.status(201).send( { user} );
+            response.status(201).send( {user} );
         })
         .catch((error) => {
             console.log(error);
+            next(error);
+        })
+}
+
+function patchUserById(request, response, next) {
+    patchAUserById(request.body)
+        .then((user) => {
+            response.status(200).send( {user} );
+        })
+        .catch((error) => {
             next(error);
         })
 }
@@ -54,5 +65,6 @@ module.exports = {
     getUsers,
     getUserById,
     addUser,
+    patchUserById,
     deleteUserById
 };

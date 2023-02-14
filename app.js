@@ -9,7 +9,8 @@ const {
     getUsers,
     getUserById,
     addUser,
-    deleteUserById
+    deleteUserById,
+    patchUserById
 } = require('./controllers/users.controller');
 
 const {
@@ -23,6 +24,7 @@ app.use(cors());
 app.get('/api/users', getUsers);
 app.get('/api/users/:user_id', getUserById);
 app.post('/api/users', addUser);
+app.patch('/api/users/:user_id', patchUserById);
 app.delete('/api/users/:user_id', deleteUserById);
 
 app.all('*', handle404Errors);
