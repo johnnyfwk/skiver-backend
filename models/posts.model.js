@@ -59,12 +59,12 @@ function addAPost(post) {
 
     const queryString = `
         INSERT INTO posts
-            (username, body, likes, timestamp)
+            (username, body, likes, image_url, timestamp)
         VALUES
-            ($1, $2, $3, $4)
+            ($1, $2, $3, $4, $5)
         RETURNING *;
     `
-    const queryValues = [post.username, post.body, post.likes, post.timestamp];
+    const queryValues = [post.username, post.body, post.likes, post.image_url, post.timestamp];
 
     return db
         .query(queryString, queryValues)
