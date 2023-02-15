@@ -20,7 +20,6 @@ function getUsers(request, response, next) {
 function getUserById(request, response, next) {
     getAUserById(request.params.user_id)
         .then((user) => {
-            console.log(user)
             response.status(200).send( { user } );
         })
         .catch((error) => {
