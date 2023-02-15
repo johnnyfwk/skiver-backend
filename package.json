@@ -9,7 +9,10 @@
     "scrap": "psql -f ./database/check/scrap.sql > ./database/check/scrap.txt",
     "drop-table-users": "node ./database/drop/tables/drop-table-users.js",
     "create-table-users": "node ./database/create/tables/create-table-users.js",
-    "seed-table-users": "node ./database/seed/seed-table-users.js"
+    "seed-table-users": "node ./database/seed/seed-table-users.js",
+    "drop-table-posts": "node ./database/drop/tables/drop-table-posts.js",
+    "create-table-posts": "node ./database/create/tables/create-table-posts.js",
+    "seed-table-posts": "node ./database/seed/seed-table-posts.js"
   },
   "author": "",
   "license": "ISC",
