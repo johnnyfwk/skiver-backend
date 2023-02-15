@@ -29,12 +29,12 @@ function getAUserById(userId) {
 function addAUser(body) {
     const queryString = `
         INSERT INTO users
-            (username, password)
+            (username, password, profile_image_url)
         VALUES
-            ($1, $2)
+            ($1, $2, $3)
         RETURNING *;
     `
-    const queryValues = [body.username, body.password];
+    const queryValues = [body.username, body.password, body.profile_image_url];
 
     return db
         .query(queryString, queryValues)
@@ -43,21 +43,14 @@ function addAUser(body) {
         })
 }
 
-function patchAUserById(body) {
-    if (!body.hasOwnProperty("username")) {
-        return Promise.reject( { "status": 400, "msg": "The request object does not include the 'username' property. Please include the 'username' property." } );
-    }
-    if (!body.hasOwnProperty("password")) {
-        return Promise.reject( { "status": 400, "msg": "The request object does not include the 'password' property. Please include the 'password' property." } );
-    }
-
+function patchAUserById(userId, body) {
     const queryString = `
         UPDATE users
-        SET password = $1
-        WHERE username = $2
+        SET profile_image_url = $1
+        WHERE user_id = $2
         RETURNING *;
     `
-    const queryValues = [body.password, body.username];
+    const queryValues = [body.profile_image_url, userId];
 
     return db
         .query(queryString, queryValues)

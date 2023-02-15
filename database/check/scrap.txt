@@ -1,41 +1,38 @@
 You are now connected to database "skiver" as user "johnny".
- user_id | username  | password  
----------+-----------+-----------
-       1 | abbie     | password
-       2 | brian     | password
-       3 | catherine | password
-       4 | david     | password
-       5 | ellie     | password
-       6 | frank     | password
-       7 | graham    | password
-       8 | holly     | password
-       9 | ian       | password
-      10 | johnny    | internick
-      11 | gimp      | gimp
-      12 | fongster  | internick
-(12 rows)
+ user_id | username  | password  |                      profile_image_url                      
+---------+-----------+-----------+-------------------------------------------------------------
+       1 | abbie     | password  | https://skiver.co.uk/assets/images/avatars/avatar_image.png
+       2 | brian     | password  | https://skiver.co.uk/assets/images/avatars/avatar_image.png
+       3 | catherine | password  | https://skiver.co.uk/assets/images/avatars/avatar_image.png
+       4 | david     | password  | https://skiver.co.uk/assets/images/avatars/avatar_image.png
+       5 | ellie     | password  | https://skiver.co.uk/assets/images/avatars/avatar_image.png
+       6 | frank     | password  | https://skiver.co.uk/assets/images/avatars/avatar_image.png
+       7 | graham    | password  | https://skiver.co.uk/assets/images/avatars/avatar_image.png
+       8 | holly     | password  | https://skiver.co.uk/assets/images/avatars/avatar_image.png
+      10 | johnny    | internick | https://skiver.co.uk/assets/images/avatars/avatar_image.png
+(9 rows)
 
- post_id | username  |                                                                body                                                                 | likes |   timestamp   
----------+-----------+-------------------------------------------------------------------------------------------------------------------------------------+-------+---------------
-       1 | abbie     | Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | 1676452363037
-       2 | brian     | Post 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | 1676452363038
-       3 | catherine | Post 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | 1676452363039
-       4 | david     | Post 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | 1676452363040
-       5 | ellie     | Post 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | 1676452363041
-       6 | frank     | Post 6 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | 1676452363042
-       7 | graham    | Post 7 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | 1676452363043
-       8 | holly     | Post 8 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | 1676452363044
-       9 | ian       | Post 9 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | 1676452363045
-      10 | johnny    | Post 10 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363046
-      11 | abbie     | Post 11 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363047
-      12 | brian     | Post 12 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363048
-      13 | catherine | Post 13 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363049
-      14 | david     | Post 14 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363050
-      15 | ellie     | Post 15 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363051
-      16 | frank     | Post 16 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363052
-      17 | graham    | Post 17 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363053
-      18 | holly     | Post 18 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363054
-      19 | ian       | Post 19 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363055
-      20 | johnny    | Post 20 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | 1676452363056
+ post_id | username  |                                                                body                                                                 | likes |                                     image_url                                      |   timestamp   
+---------+-----------+-------------------------------------------------------------------------------------------------------------------------------------+-------+------------------------------------------------------------------------------------+---------------
+       1 | abbie     | Post 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363037
+       2 | brian     | Post 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363038
+       3 | catherine | Post 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363039
+       4 | david     | Post 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363040
+       5 | ellie     | Post 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363041
+       6 | frank     | Post 6 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363042
+       7 | graham    | Post 7 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363043
+       8 | holly     | Post 8 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363044
+       9 | ian       | Post 9 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363045
+      10 | johnny    | Post 10 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363046
+      11 | abbie     | Post 11 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363047
+      12 | brian     | Post 12 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363048
+      13 | catherine | Post 13 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363049
+      14 | david     | Post 14 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363050
+      15 | ellie     | Post 15 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363051
+      16 | frank     | Post 16 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363052
+      17 | graham    | Post 17 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363053
+      18 | holly     | Post 18 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363054
+      19 | ian       | Post 19 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363055
+      20 | johnny    | Post 20 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |     0 | https://skiver.co.uk/assets/images/photos/guinea_pig_in_glasses_reading_a_book.jpg | 1676452363056
 (20 rows)
 

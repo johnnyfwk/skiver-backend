@@ -40,7 +40,7 @@ function addUser(request, response, next) {
 }
 
 function patchUserById(request, response, next) {
-    patchAUserById(request.body)
+    patchAUserById(request.params.user_id, request.body)
         .then((user) => {
             response.status(200).send( {user} );
         })

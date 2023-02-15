@@ -7,6 +7,7 @@ function createTablePosts() {
           username VARCHAR(20),
           body VARCHAR(300),
           likes INT,
+          image_url TEXT,
           timestamp BIGINT
       );
   `    

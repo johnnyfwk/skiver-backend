@@ -1,14 +1,14 @@
 const users = [
-    {username: "abbie", password: "password"},
-    {username: "brian", password: "password"},
-    {username: "catherine", password: "password"},
-    {username: "david", password: "password"},
-    {username: "ellie", password: "password"},
-    {username: "frank", password: "password"},
-    {username: "graham", password: "password"},
-    {username: "holly", password: "password"},
-    {username: "ian", password: "password"},
-    {username: "johnny", password: "internick"}
+    {username: "abbie", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
+    {username: "brian", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
+    {username: "catherine", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
+    {username: "david", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
+    {username: "ellie", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
+    {username: "frank", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
+    {username: "graham", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
+    {username: "holly", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
+    {username: "ian", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
+    {username: "johnny", password: "internick", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"}
 ]
 
 module.exports = users

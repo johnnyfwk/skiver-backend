@@ -4,13 +4,13 @@ const format = require('pg-format');
 
 function seedTablePosts( posts ) {
     const postsQueryValues = posts.map((post) => {
-        const postArray = [post.username, post.body, post.likes, post.timestamp];
+        const postArray = [post.username, post.body, post.likes, post.image_url, post.timestamp];
         return postArray;
     });
 
     const postsQueryStringAndValues = format(`
         INSERT INTO posts
-            ( username, body, likes, timestamp )
+            ( username, body, likes, image_url, timestamp )
         VALUES
             %L
         RETURNING *;`, postsQueryValues 
