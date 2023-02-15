@@ -61,11 +61,11 @@ function patchAUserById(body) {
 
     return db
         .query(queryString, queryValues)
-        .then((result) => {
-            if (result.rowCount === 0) {
+        .then((response) => {
+            if (response.rowCount === 0) {
                 return Promise.reject( { "status": 404, "msg": "User does not exist." } );
             }
-            return result.rows[0];
+            return response.rows[0];
         })
 }
 
