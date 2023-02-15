@@ -44,19 +44,6 @@ function getAllPostsByUsername(username) {
 }
 
 function addAPost(post) {
-    if (!post.hasOwnProperty("username")) {
-        return Promise.reject( { "status": 400, "msg": "The request object does not include the 'username' property. Please include the 'username' property." } );
-    }
-    if (!post.hasOwnProperty("body")) {
-        return Promise.reject( { "status": 400, "msg": "The request object does not include the 'body' property. Please include the 'body' property." } );
-    }
-    if (!post.hasOwnProperty("likes")) {
-        return Promise.reject( { "status": 400, "msg": "The request object does not include the 'likes' property. Please include the 'likes' property." } );
-    }
-    if (!post.hasOwnProperty("timestamp")) {
-        return Promise.reject( { "status": 400, "msg": "The request object does not include the 'timestamp' property. Please include the 'timestamp' property." } );
-    }
-
     const queryString = `
         INSERT INTO posts
             (username, body, likes, image_url, timestamp)
