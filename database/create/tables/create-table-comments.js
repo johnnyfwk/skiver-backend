@@ -6,7 +6,8 @@ function createTableComments() {
           comment_id SERIAL PRIMARY KEY,
           post_id INT,
           owner VARCHAR(20),
-          body VARCHAR(300)
+          body VARCHAR(300),
+          timestamp BIGINT
       );
   `    
   return db        

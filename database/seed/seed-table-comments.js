@@ -4,13 +4,13 @@ const format = require('pg-format');
 
 function seedTableComments( comments ) {
     const commentsQueryValues = comments.map((comment) => {
-        const commentArray = [comment.post_id, comment.owner, comment.body];
+        const commentArray = [comment.post_id, comment.owner, comment.body, comment.timestamp];
         return commentArray;
     });
 
     const commentsQueryStringAndValues = format(`
         INSERT INTO comments
-            ( post_id, owner, body )
+            ( post_id, owner, body, timestamp )
         VALUES
             %L
         RETURNING *;`, commentsQueryValues 

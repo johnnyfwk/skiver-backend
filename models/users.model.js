@@ -43,7 +43,7 @@ function addAUser(body) {
         })
 }
 
-function patchAUserById(userId, body) {
+function editAUserById(userId, body) {
     const queryString = `
         UPDATE users
         SET profile_image_url = $1
@@ -84,6 +84,6 @@ module.exports = {
     getAllUsers,
     getAUserById,
     addAUser,
-    patchAUserById,
+    editAUserById,
     deleteAUserById
 };
