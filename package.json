@@ -12,7 +12,10 @@
     "seed-table-users": "node ./database/seed/seed-table-users.js",
     "drop-table-posts": "node ./database/drop/tables/drop-table-posts.js",
     "create-table-posts": "node ./database/create/tables/create-table-posts.js",
-    "seed-table-posts": "node ./database/seed/seed-table-posts.js"
+    "seed-table-posts": "node ./database/seed/seed-table-posts.js",
+    "drop-table-comments": "node ./database/drop/tables/drop-table-comments.js",
+    "create-table-comments": "node ./database/create/tables/create-table-comments.js",
+    "seed-table-comments": "node ./database/seed/seed-table-comments.js"
   },
   "author": "",
   "license": "ISC",
