@@ -61,22 +61,16 @@ function addAPost(post) {
 }
 
 function editAPostById(postId, post) {
-    if (!post.hasOwnProperty("body")) {
-        return Promise.reject( { "status": 400, "msg": "The request object does not include the 'body' property. Please include the 'body' property." } );
-    }
-    if (!post.hasOwnProperty("image_url")) {
-        return Promise.reject( { "status": 400, "msg": "The request object does not include the 'image_url' property. Please include the 'image_url' property." } );
-    }
-
     const queryString = `
         UPDATE posts
         SET
             body = $1,
-            image_url = $2
-        WHERE post_id = $3
+            likes = $2,
+            image_url = $3
+        WHERE post_id = $4
         RETURNING *;
     `
-    const queryValues = [post.body, post.image_url, postId];
+    const queryValues = [post.body, post.likes, post.image_url, postId];
 
     return db
         .query(queryString, queryValues)
