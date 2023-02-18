@@ -32,8 +32,8 @@ function getPostById(request, response, next) {
 
 function getPostsByUsername(request, response, next) {
     getAllPostsByUsername(request.params.username)
-        .then((post) => {
-            response.status(200).send( {post} );
+        .then((posts) => {
+            response.status(200).send( {posts} );
         })
         .catch((error) => {
             console.log(error);
