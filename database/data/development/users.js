@@ -8,7 +8,7 @@ const users = [
     {username: "graham", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
     {username: "holly", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
     {username: "ian", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"},
-    {username: "johnny", password: "internick", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"}
+    {username: "johnny", password: "password", profile_image_url: "https://skiver.co.uk/assets/images/avatars/avatar_image.png"}
 ]
 
 module.exports = users
