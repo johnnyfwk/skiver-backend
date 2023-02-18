@@ -117,6 +117,44 @@ function deleteACommentById(commentId) {
         })
 }
 
+function deleteAllCommentsByPostId(postId) {
+    const queryString = `
+        DELETE FROM comments
+        WHERE comment_id IN
+            (SELECT comment_id FROM comments WHERE post_id = $1)
+        RETURNING *;
+    `
+    const queryValue = [postId];
+
+    return db
+        .query(queryString, queryValue)
+        .then((response) => {
+            if (response.rowCount === 0) {
+                return Promise.reject( {"status": 404, "msg": "Post does not exist."} );
+            }
+            return response.rows;
+        })
+}
+
+function deleteAllCommentsByUsername(username) {
+    const queryString = `
+        DELETE FROM comments
+        WHERE comment_id IN
+            (SELECT comment_id FROM comments WHERE owner = $1)
+        RETURNING *;
+    `
+    const queryValue = [username];
+
+    return db
+        .query(queryString, queryValue)
+        .then((response) => {
+            if (response.rowCount === 0) {
+                return Promise.reject( {"status": 404, "msg": "User does not exist."} );
+            }
+            return response.rows;
+        })
+}
+
 module.exports = {
     getAllComments,
     getACommentById,
@@ -124,5 +162,7 @@ module.exports = {
     getAllCommentsByUserId,
     postAComment,
     editACommentById,
-    deleteACommentById
+    deleteACommentById,
+    deleteAllCommentsByPostId,
+    deleteAllCommentsByUsername
 }

@@ -5,7 +5,9 @@ const {
     getAllCommentsByUserId,
     postAComment,
     editACommentById,
-    deleteACommentById
+    deleteACommentById,
+    deleteAllCommentsByPostId,
+    deleteAllCommentsByUsername
 } = require('../models/comments.model');
 
 function getComments(request, response, next) {
@@ -85,6 +87,28 @@ function deleteCommentById(request, response, next) {
         })
 }
 
+function deleteCommentsByPostId(request, response, next) {
+    deleteAllCommentsByPostId(request.params.post_id)
+        .then((comments) => {
+            response.status(204).send( {comments} );
+        })
+        .catch((error) => {
+            console.log(error);
+            next(error);
+        })
+}
+
+function deleteCommentsByUsername(request, response, next) {
+    deleteAllCommentsByUsername(request.params.username)
+        .then((comments) => {
+            response.status(204).send( {comments} );
+        })
+        .catch((error) => {
+            console.log(error);
+            next(error);
+        })
+}
+
 module.exports = {
     getComments,
     getCommentById,
@@ -92,5 +116,7 @@ module.exports = {
     getCommentsByUsername,
     postComment,
     editCommentById,
-    deleteCommentById
+    deleteCommentById,
+    deleteCommentsByPostId,
+    deleteCommentsByUsername
 }

@@ -15,7 +15,8 @@
     "seed-table-posts": "node ./database/seed/seed-table-posts.js",
     "drop-table-comments": "node ./database/drop/tables/drop-table-comments.js",
     "create-table-comments": "node ./database/create/tables/create-table-comments.js",
-    "seed-table-comments": "node ./database/seed/seed-table-comments.js"
+    "seed-table-comments": "node ./database/seed/seed-table-comments.js",
+    "drop-create-seed-all-tables": "node ./database/all/drop-create-seed-all-tables.js"
   },
   "author": "",
   "license": "ISC",

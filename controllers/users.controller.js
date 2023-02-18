@@ -3,7 +3,9 @@ const {
     getAUserById,
     addAUser,
     editAUserById,
-    deleteAUserById
+    editAUserByUsername,
+    deleteAUserById,
+    deleteAUserByUsername
 } = require('../models/users.model');
 
 function getUsers(request, response, next) {
@@ -49,8 +51,29 @@ function editUserById(request, response, next) {
         })
 }
 
+function editUserByUsername(request, response, next) {
+    editAUserByUsername(request.params.username, request.body)
+        .then((user) => {
+            response.status(200).send( {user} );
+        })
+        .catch((error) => {
+            next(error);
+        })
+}
+
 function deleteUserById(request, response, next) {
     deleteAUserById(request.params.user_id)
+        .then((user) => {
+            response.status(204).send( {user} );
+        })
+        .catch((error) => {
+            console.log(error);
+            next(error);
+        })
+}
+
+function deleteUserByUsername(request, response, next) {
+    deleteAUserByUsername(request.params.username)
         .then((user) => {
             response.status(204).send( {user} );
         })
@@ -65,5 +88,7 @@ module.exports = {
     getUserById,
     addUser,
     editUserById,
-    deleteUserById
+    editUserByUsername,
+    deleteUserById,
+    deleteUserByUsername
 };

@@ -100,11 +100,31 @@ function deleteAPostById(postId) {
         })
 }
 
+function deleteAllPostsByUsername(username) {
+    const queryString = `
+        DELETE FROM posts
+        WHERE post_id IN
+            (SELECT post_id FROM posts WHERE username = $1)
+        RETURNING *;
+    `
+    const queryValue = [username];
+
+    return db
+        .query(queryString, queryValue)
+        .then((response) => {
+            if (response.rowCount === 0) {
+                return Promise.reject( {"status": 404, "msg": "User does not exist."} );
+            }
+            return response.rows;
+        })
+}
+
 module.exports = {
     getAllPosts,
     getAPostById,
     getAllPostsByUsername,
     addAPost,
     editAPostById,
-    deleteAPostById
+    deleteAPostById,
+    deleteAllPostsByUsername
 }

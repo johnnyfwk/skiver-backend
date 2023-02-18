@@ -4,7 +4,8 @@ const {
     getAllPostsByUsername,
     addAPost,
     editAPostById,
-    deleteAPostById
+    deleteAPostById,
+    deleteAllPostsByUsername
 } = require('../models/posts.model');
 
 function getPosts(request, response, next) {
@@ -73,11 +74,23 @@ function deletePostById(request, response, next) {
         })
 }
 
+function deletePostsByUsername(request, response, next) {
+    deleteAllPostsByUsername(request.params.username)
+        .then((comments) => {
+            response.status(204).send( {comments} );
+        })
+        .catch((error) => {
+            console.log(error);
+            next(error);
+        })
+}
+
 module.exports = {
     getPosts,
     getPostById,
     getPostsByUsername,
     addPost,
     editPostById,
-    deletePostById
+    deletePostById,
+    deletePostsByUsername
 }

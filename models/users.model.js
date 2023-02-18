@@ -62,6 +62,25 @@ function editAUserById(userId, body) {
         })
 }
 
+function editAUserByUsername(username, body) {
+    const queryString = `
+        UPDATE users
+        SET profile_image_url = $1
+        WHERE username = $2
+        RETURNING *;
+    `
+    const queryValues = [body.profile_image_url, username];
+
+    return db
+        .query(queryString, queryValues)
+        .then((response) => {
+            if (response.rowCount === 0) {
+                return Promise.reject( { "status": 404, "msg": "User does not exist." } );
+            }
+            return response.rows[0];
+        })
+}
+
 function deleteAUserById(userId) {
     const queryString = `
         DELETE FROM users
@@ -80,10 +99,30 @@ function deleteAUserById(userId) {
         })
 }
 
+function deleteAUserByUsername(username) {
+    const queryString = `
+        DELETE FROM users
+        WHERE username = $1
+        RETURNING *;
+    `
+    const queryValue = [username];
+
+    return db
+        .query(queryString, queryValue)
+        .then((response) => {
+            if (response.rowCount === 0) {
+                return Promise.reject( {"status": 404, "msg": "User does not exist."} );
+            }
+            return response.rows[0];
+        })
+}
+
 module.exports = {
     getAllUsers,
     getAUserById,
     addAUser,
     editAUserById,
-    deleteAUserById
+    editAUserByUsername,
+    deleteAUserById,
+    deleteAUserByUsername
 };
