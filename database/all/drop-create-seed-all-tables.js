@@ -164,28 +164,28 @@ function seedTableComments( comments ) {
 const dropCreateAndSeedAllTables = () => {
     return dropTableUsers()
         .then(() => {
-            dropTablePosts();
+            return dropTablePosts();
         })
         .then(() => {
-            dropTableComments();
+            return dropTableComments();
         })
         .then(() => {
-            createTableUsers();
+            return createTableUsers();
         })
         .then(() => {
-            createTablePosts();
+            return createTablePosts();
         })
         .then(() => {
-            createTableComments();
+            return createTableComments();
         })
         .then(() => {
-            seedTableUsers(users);
+            return seedTableUsers(users);
         })
         .then(() => {
-            seedTablePosts(posts);
+            return seedTablePosts(posts);
         })
         .then(() => {
-            seedTableComments(comments);
+            return seedTableComments(comments);
         })
         .then(() => {
             db.end();
