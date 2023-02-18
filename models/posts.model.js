@@ -36,9 +36,9 @@ function getAllPostsByUsername(username) {
     return db
         .query(queryString, queryValue)
         .then((response) => {
-            if (response.rowCount === 0) {
-                return Promise.reject( { "status": 404, "msg": "User does not exist." } );
-            }
+            // if (response.rowCount === 0) {
+            //     return Promise.reject( { "status": 404, "msg": "User has not created any posts yet." } );
+            // }
             return response.rows;
         })
 }

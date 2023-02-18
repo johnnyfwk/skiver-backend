@@ -2,7 +2,7 @@ const db = require('../database/connection');
 
 function getAllUsers() {
     return db
-        .query("SELECT * FROM users;")
+        .query("SELECT * FROM users ORDER BY user_id DESC;")
         .then((response) => {
             return response.rows;
         })
