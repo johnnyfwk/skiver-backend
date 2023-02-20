@@ -5,7 +5,7 @@
   "main": "listen.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon listen.js",
+    "start": "node listen.js",
     "scrap": "psql -f ./database/check/scrap.sql > ./database/check/scrap.txt",
     "check-tables": "node ./database/check/check-tables.js",
 
