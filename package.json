@@ -2,11 +2,13 @@
   "name": "skiver-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "listen.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon listen.js",
     "scrap": "psql -f ./database/check/scrap.sql > ./database/check/scrap.txt",
+    "check-tables": "node ./database/check/check-tables.js",
+
     "drop-table-users": "node ./database/drop/tables/drop-table-users.js",
     "create-table-users": "node ./database/create/tables/create-table-users.js",
     "seed-table-users": "node ./database/seed/seed-table-users.js",
@@ -16,7 +18,19 @@
     "drop-table-comments": "node ./database/drop/tables/drop-table-comments.js",
     "create-table-comments": "node ./database/create/tables/create-table-comments.js",
     "seed-table-comments": "node ./database/seed/seed-table-comments.js",
-    "drop-create-seed-all-tables": "node ./database/all/drop-create-seed-all-tables.js"
+    "drop-create-seed-all-tables": "node ./database/all/drop-create-seed-all-tables.js",
+
+    "production-check-tables": "NODE_ENV=production npm run check-tables > ./database/check/production-tables.text",
+    "production-drop-table-users": "NODE_ENV=production npm run drop-table-users",
+    "production-create-table-users": "NODE_ENV=production npm run create-table-users",
+    "production-seed-table-users": "NODE_ENV=production npm run seed-table-users",
+    "production-drop-table-posts": "NODE_ENV=production npm run drop-table-posts",
+    "production-create-table-posts": "NODE_ENV=production npm run create-table-posts",
+    "production-seed-table-posts": "NODE_ENV=production npm run seed-table-posts",
+    "production-drop-table-comments": "NODE_ENV=production npm run drop-table-comments",
+    "production-create-table-comments": "NODE_ENV=production npm run create-table-comments",
+    "production-seed-table-comments": "NODE_ENV=production npm run seed-table-comments",
+    "production-drop-create-seed-all-tables": "NODE_ENV=production npm run drop-create-seed-all-tables"
   },
   "author": "",
   "license": "ISC",
