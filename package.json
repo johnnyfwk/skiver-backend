@@ -8,7 +8,6 @@
     "start": "node listen.js",
     "scrap": "psql -f ./database/check/scrap.sql > ./database/check/scrap.txt",
     "check-tables": "node ./database/check/check-tables.js",
-
     "drop-table-users": "node ./database/drop/tables/drop-table-users.js",
     "create-table-users": "node ./database/create/tables/create-table-users.js",
     "seed-table-users": "node ./database/seed/seed-table-users.js",
@@ -19,7 +18,6 @@
     "create-table-comments": "node ./database/create/tables/create-table-comments.js",
     "seed-table-comments": "node ./database/seed/seed-table-comments.js",
     "drop-create-seed-all-tables": "node ./database/all/drop-create-seed-all-tables.js",
-
     "production-check-tables": "NODE_ENV=production npm run check-tables > ./database/check/production-tables.text",
     "production-drop-table-users": "NODE_ENV=production npm run drop-table-users",
     "production-create-table-users": "NODE_ENV=production npm run create-table-users",
@@ -38,6 +36,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-json": "^1.0.0",
     "pg": "^8.9.0",
     "pg-format": "^1.0.4"
   },
