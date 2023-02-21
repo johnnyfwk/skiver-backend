@@ -1,6 +1,6 @@
 Skiver.co.uk is a social media app built using PostgreSQL, Express, React, and Node.js.
 
-The backend is an API (Hosted URL: https://skiver.onrender.com/api) that supplies the frontend (Github: https://github.com/johnnyfwk/skiver-frontend, Live URL: https://skiver.co.uk/) with data stored in PostgreSQL.
+An Express API (Hosted URL: https://skiver.onrender.com/api) that supplies the frontend (Github: https://github.com/johnnyfwk/skiver-frontend, Live URL: https://skiver.co.uk/) with data stored in PostgreSQL.
 
 The data used in this project are users' posts and comments.
 
