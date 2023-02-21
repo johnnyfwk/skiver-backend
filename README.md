@@ -5,7 +5,6 @@ An Express API (Hosted URL: https://skiver.onrender.com/api) that supplies the f
 The data used in this project are users' posts and comments.
 
 To clone this repo:
-
 - go to https://github.com/johnnyfwk/skiver-backend;
 - near the top of the page, click on the 'Code' button;
 - in the 'Local' tab, copy the HTTPS URL (https://github.com/johnnyfwk/skiver-backend.git);
